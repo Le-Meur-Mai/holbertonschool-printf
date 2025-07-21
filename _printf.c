@@ -6,10 +6,10 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 1;
+	int i = 0;
 	int result = 0;
 	int (*speformat)(va_list);
-	va_list = args;
+	va_list args;
 
 	if (format[0] == '"' && format != NULL)
 	{
@@ -32,7 +32,8 @@ int _printf(const char *format, ...)
 			break;
 
 			result++;
+			_putchar(format[i]);
 		}
-	}
+	/*}*/
 	return (0);
 }
