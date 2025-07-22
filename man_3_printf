@@ -1,0 +1,65 @@
+NAME-
+_printf : function that print a string in the standard output
+
+SYNOPSIS-
+#include "main.h"
+
+int _printf(const char *format, ...);
+
+DESCRIPTION-
+
+You can use specifiers of conversion,
+you can specify what you want to convert in the arguments in the right order.
+
+Specifiers of Conversion possible:
+
+%c = print the char linked to it in the arguments
+%s = print the char * linked to it in the arguments
+%d = print the int linked to it in the arguments
+%i = print the int linked to it in the arguments
+%% = print the character '%'
+
+Flags supported:
+
+NONE
+
+Field width :
+
+None
+
+Precision :
+
+None
+
+Lenght Modifiers:
+
+None
+
+RETURN VALUE-
+
+The return value correspond to the numbers of bytes print in the
+standard output. The NULL byte is not counted.
+If the string in the argument is NULL, the function return a negative value.
+
+EXAMPLES-
+
+You may want to use _printf to print a date at the format
+"Wednesday 22 july 2025" :
+_printf("%s %d %s %d", day, date, month, year);
+
+Another usage can be :
+"The first letter of my name is A and I am 8"
+_printf("The first letter of my name is %c and I am %i", FirstLetter, age);
+
+SEE ALSO-
+
+printf(3)
+
+DATE-
+
+22/07/2025
+
+AUTHORS-
+
+Antoine Coquemont
+Maï Le Meur
