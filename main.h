@@ -7,20 +7,19 @@
 
 int _printf(const char *format, ...);
 
-int _strlen(char *s);
+int _string_lenght(char *s);
 int _putchar(char c);
-int _strcmp(char *s1, char *s2);
 void print_error(void);
-int print_char(va_list args);
-int print_str(va_list args);
-int print_int(va_list args);
+int print_character(va_list args);
+int print_string(va_list args);
+int print_integer(va_list args);
 
-typedef struct pourcent
+typedef struct specifier_function_structur
 {
-	char specifieur;
-	int (*f)(va_list args);
-} p;
+	char specifier;
+	int (*function_specifier_format)(va_list args);
+} sf;
 
-int (*get_sf_func(char s))(va_list);
+int (*choose_function_specifier_format(char s))(va_list);
 
 #endif

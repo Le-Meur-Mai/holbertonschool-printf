@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "main.h"
 
-int print_char(va_list args)
+int print_character(va_list args)
 {
 	char character = va_arg(args, int);
 
@@ -9,42 +9,42 @@ int print_char(va_list args)
 	return (1);
 }
 
-int print_str(va_list args)
+int print_string(va_list args)
 {
-	char *str = va_arg(args, char *);
+	char *string = va_arg(args, char *);
 	int i = 0;
 
-	if (!str)
-		str = "(null)";
-	while (str[i])
+	if (!string)
+		string = "(null)";
+	while (string[i])
 	{
-		_putchar(str[i]);
+		_putchar(string[i]);
 		i++;
 	}
 	return (i);
 }
 
-int print_int(va_list args)
+int print_integer(va_list args)
 {
-	int entier = va_arg(args, int);
+	int number = va_arg(args, int);
 	int modulo = 0, i = 0, count = 0, negative = 0;
 	char *string;
 
 	string = malloc(12);
-	if (entier < 0)
+	if (number < 0)
 	{
 		negative = 1;
-		entier = -entier;
+		number = -number;
 	}
-	else if (entier == 0)
+	else if (number == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
-	while (entier > 0)
+	while (number > 0)
 	{
-		modulo = entier % 10;
-		entier = entier / 10;
+		modulo = number % 10;
+		number = number / 10;
 		string[i] = '0' + modulo;
 		i++;
 	}
@@ -54,13 +54,13 @@ int print_int(va_list args)
 		i++;
 	}
 	string[i] = '\0';
-	count = _strlen(string);
+	count = _string_lenght(string);
 	while (count >= 0)
 	{
 		_putchar(string[count]);
 		count--;
 	}
-	count = _strlen(string);
+	count = _string_lenght(string);
 	free(string);
 	return (count);
 }

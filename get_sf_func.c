@@ -1,20 +1,20 @@
 #include "main.h"
 
-int (*get_sf_func(char s))(va_list args)
+int (*choose_function_specifier_format(char s))(va_list args)
 {
-	p specifieur_format[] = {
-		{'c', print_char},
-		{'s', print_str},
-		{'d', print_int},
-		{'i', print_int},
+	sf specifier_format[] = {
+		{'c', print_character},
+		{'s', print_string},
+		{'d', print_integer},
+		{'i', print_integer},
 		{'\0', NULL}
 	};
 	int i = 0;
 
-	while (specifieur_format[i].specifieur != '\0')
+	while (specifier_format[i].specifier != '\0')
 	{
-		if (s == specifieur_format[i].specifieur)
-			return (specifieur_format[i].f);
+		if (s == specifier_format[i].specifier)
+			return (specifier_format[i].function_specifier_format);
 		i++;
 	}
 
