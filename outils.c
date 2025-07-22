@@ -32,3 +32,13 @@ int _strcmp(char *s1, char *s2)
 	}
 	return (result);
 }
+
+void print_error(void)
+{
+    _putchar('E');
+    _putchar('r');
+    _putchar('r');
+    _putchar('o');
+    _putchar('r');
+    _putchar('\n');
+}

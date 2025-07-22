@@ -3,9 +3,8 @@
 int (*get_sf_func(char s))(va_list args)
 {
     p specifieur_format[] = {
-        {'c', print_str},
+        {'c', print_char},
         {'s', print_str},
-        {'%', print_pourcent},
         {'d', print_int},
         {'i', print_int},
         {'\0', NULL}
@@ -21,5 +20,5 @@ int (*get_sf_func(char s))(va_list args)
     }
 
     s++;
-    return (print_str);
+    return (NULL);
 }

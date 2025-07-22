@@ -23,13 +23,10 @@ int _printf(const char *format, ...)
 			{
 				i++;
 				speformat = get_sf_func(format[i]);
-				if (format[i + 1] == 's')
+				if (speformat != NULL)
 					count += speformat(args);
 				else
-				{
 					count += _putchar('%');
-					count += _putchar(format[i]);
-				}
 			}
 			else
 			count += _putchar(format[i]);

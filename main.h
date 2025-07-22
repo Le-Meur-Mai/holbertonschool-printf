@@ -10,9 +10,10 @@ int _printf(const char *format, ...);
 int _strlen(char *s);
 int _putchar(char c);
 int _strcmp(char *s1, char *s2);
+void print_error();
+int print_char(va_list args);
 int print_str(va_list args);
 int print_int(va_list args);
-int print_pourcent(va_list args);
 
 typedef struct pourcent{
     char specifieur;
