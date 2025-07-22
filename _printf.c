@@ -7,33 +7,34 @@
 int _printf(const char *format, ...)
 {
 	int i = 0;
-	int result = 0;
+	int count = 0;
 	int (*speformat)(va_list);
 	va_list args;
 
-	if (format[0] == '"' && format != NULL)
-	{
-		for (; format[i] != '\0'; i++)
+
+	if (format == NULL)
+		return (-1);
+
+	va_start(args, format);
+
+	for (; format[i] != '\0'; i++)
 		{
-			if (format[i] == '%')
+			if (format[i] == '%' && format[i + 1] != '\0')
 			{
-				speformat = get_sf_func(format[i + 1]);
+				i++;
+				speformat = get_sf_func(format[i]);
 				if (format[i + 1] == 's')
-				{
-					speformat(va_arg(args, char *));
-				}
+					count += speformat(args);
 				else
 				{
-					speformat(va_arg(args, int));
+					count += _putchar('%');
+					count += _putchar(format[i]);
 				}
-				i++;
 			}
-			if (format[i] == '"')
-			break;
-
-			result++;
-			_putchar(format[i]);
+			else
+			count += _putchar(format[i]);
 		}
-	/*}*/
-	return (0);
+
+	va_end(args);
+	return (count);
 }
