@@ -35,10 +35,10 @@ int _strcmp(char *s1, char *s2)
 
 void print_error(void)
 {
-    _putchar('E');
-    _putchar('r');
-    _putchar('r');
-    _putchar('o');
-    _putchar('r');
-    _putchar('\n');
+	_putchar('E');
+	_putchar('r');
+	_putchar('r');
+	_putchar('o');
+	_putchar('r');
+	_putchar('\n');
 }
