@@ -20,8 +20,8 @@ int main(void)
     addr = (void *)0x7ffe637541f0;*/
     _printf("Length:[%d, %i]\n", len, len2);
     printf("Length:[%d, %i]\n", len, len2);
-    _printf("Negative:[%d]\n", 123);
-    printf("Negative:[%d]\n", 123);
+    _printf("Negative:[%d]\n", 000);
+    printf("Negative:[%d]\n", 000);
     /**_printf("Unsigned:[%u]\n", ui);
     printf("Unsigned:[%u]\n", ui);
     _printf("Unsigned octal:[%o]\n", ui);
@@ -30,8 +30,8 @@ int main(void)
     printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);*/
     _printf("Character:[%c]\n", '\0');
     printf("Character:[%c]\n", '\0');
-    printf("String:[%s]\n", "bonjour");
-    _printf("String:[%s]\n", "bonjour");
+    printf("String:[%s]\n", NULL);
+    _printf("String:[%s]\n", NULL);
     /**_printf("Address:[%p]\n", addr);
     printf("Address:[%p]\n", addr);*/
     len = _printf("Percent:[%%]\n");

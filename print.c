@@ -15,7 +15,7 @@ int print_str(va_list args)
     int i = 0;
 
     if (!str)
-        str = NULL;  
+        str = "(null)";  
     while (str[i]) {
         _putchar(str[i]);
         i++;
@@ -36,6 +36,11 @@ int print_int(va_list args)
         negative = 1;
         entier = -entier;
     }
+    else if (entier == 0)
+    {
+        _putchar('0');
+        return(1);
+    }
 
     
     while (entier > 0)
@@ -51,7 +56,7 @@ int print_int(va_list args)
         string[i] = '-';
         i++;
     }
-    
+
     string[i] = '\0';
     
     count = _strlen(string);
