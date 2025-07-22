@@ -16,6 +16,7 @@ int (*f)(va_list args);
 
 int _strlen(char *s);
 int _putchar(char c);
+int _strcmp(char *s1, char *s2);
 int print_str(va_list args);
 int print_int(va_list args);
 int print_pourcent(va_list args);
