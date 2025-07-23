@@ -13,13 +13,13 @@ int _putchar(char c)
 }
 
 /**
- * _string_lenght - Calculates the length of a string
+ * _string_length - Calculates the length of a string
  * @s: Pointer to the string
  *
  * Return: Length of the string
  */
 
-int _string_lenght(char *s)
+int _string_length(char *s)
 {
 	int i = 0;
 
