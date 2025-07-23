@@ -24,6 +24,6 @@ int (*choose_function_specifier_format(char s))(va_list args)
 			return (specifier_format[i].function_specifier_format);
 		i++;
 	}
-	
+
 	return (NULL);
 }
