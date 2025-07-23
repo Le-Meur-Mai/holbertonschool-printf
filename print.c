@@ -60,6 +60,7 @@ int print_integer(va_list args)
 	else if (number == 0)
 	{
 		_putchar('0');
+		free(string);
 		return (1);
 	}
 	while (number > 0)
@@ -75,7 +76,7 @@ int print_integer(va_list args)
 		i++;
 	}
 	string[i] = '\0';
-	count = _string_lenght(string);
+	count = _string_lenght(string) - 1;
 	while (count >= 0)
 	{
 		_putchar(string[count]);
