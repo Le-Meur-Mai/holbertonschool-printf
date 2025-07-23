@@ -81,7 +81,7 @@ int print_integer(va_list args)
 		_putchar(string[count]);
 		count--;
 	}
-	count = _string_lenght(string);
+	count = _string_lenght(string) - 1;
 	free(string);
 	return (count);
 }
