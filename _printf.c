@@ -22,6 +22,15 @@ int _printf(const char *format, ...)
 			function_pointer_specifier_format = choose_function_specifier_format(format[i]);
 			if (function_pointer_specifier_format != NULL)
 				count += function_pointer_specifier_format(args);
+			else if (format[i] == '%')
+			{
+				count += _putchar('%');
+			}
+			else if (format[i] > 'A' && format[i] <'z')
+			{
+				count += _putchar('%');
+				count += _putchar(format[i]);
+			}
 			else
 				count += _putchar('%');
 		}
