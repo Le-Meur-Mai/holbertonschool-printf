@@ -52,6 +52,8 @@ int print_integer(va_list args)
 	char *string;
 
 	string = malloc(12);
+	if (string == NULL)
+		return 0;
 	if (number < 0)
 	{
 		negative = 1;
