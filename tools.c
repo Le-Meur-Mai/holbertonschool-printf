@@ -1,9 +1,23 @@
 #include "main.h"
 
+/**
+ * _putchar - Writes a character to standard output
+ * @c: The character to print
+ *
+ * Return: 1 on success, -1 on error
+ */
+
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
+/**
+ * _string_lenght - Calculates the length of a string
+ * @s: Pointer to the string
+ *
+ * Return: Length of the string
+ */
 
 int _string_lenght(char *s)
 {
@@ -14,14 +28,4 @@ int _string_lenght(char *s)
 		i++;
 	}
 	return (i);
-}
-
-void print_error(void)
-{
-	_putchar('E');
-	_putchar('r');
-	_putchar('r');
-	_putchar('o');
-	_putchar('r');
-	_putchar('\n');
 }

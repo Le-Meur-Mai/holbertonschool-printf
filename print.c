@@ -1,6 +1,14 @@
 #include <stdlib.h>
 #include "main.h"
 
+/**
+ * print_character - Prints a character 
+ * @args: The va_list containing the character to print
+ *
+ * Return: Number of characters printed (always 1)
+ */
+
+
 int print_character(va_list args)
 {
 	char character = va_arg(args, int);
@@ -8,6 +16,13 @@ int print_character(va_list args)
 	_putchar(character);
 	return (1);
 }
+
+/**
+ * print_string - Prints a string
+ * @args: The va_list containing the string to print
+ *
+ * Return: Number of characters printed in the string
+ */
 
 int print_string(va_list args)
 {
@@ -23,6 +38,13 @@ int print_string(va_list args)
 	}
 	return (i);
 }
+
+/**
+ * print_character - Prints integer
+ * @args: The va_list containing the integer to print
+ *
+ * Return: Number of integer printed
+ */
 
 int print_integer(va_list args)
 {

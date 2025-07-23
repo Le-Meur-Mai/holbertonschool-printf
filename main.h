@@ -9,10 +9,18 @@ int _printf(const char *format, ...);
 
 int _string_lenght(char *s);
 int _putchar(char c);
-void print_error(void);
 int print_character(va_list args);
 int print_string(va_list args);
 int print_integer(va_list args);
+
+/**
+ * struct specifier_function_structur - Maps format specifiers to functions
+ * @specifier: Format specifier character ('c', 's', 'd', 'i')
+ * @function_specifier_format: Function pointer for handling the specifier
+ *
+ * Description: Structure used to associate format specifiers with their
+ * corresponding handler functions for formatted output.
+ */
 
 typedef struct specifier_function_structur
 {

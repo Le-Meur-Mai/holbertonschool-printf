@@ -1,6 +1,13 @@
 #include "main.h"
 #include <stdarg.h>
 
+/**
+ * _printf - Produces output according to a format string
+ * @format: The format string containing characters and format specifiers
+ *
+ * Return: Number of characters printed (excluding null byte)
+ */
+ 
 int _printf(const char *format, ...)
 {
 	int i = 0;
