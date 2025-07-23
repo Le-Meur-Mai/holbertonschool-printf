@@ -2,12 +2,11 @@
 #include "main.h"
 
 /**
- * print_character - Prints a character 
+ * print_character - Prints a character
  * @args: The va_list containing the character to print
  *
  * Return: Number of characters printed (always 1)
  */
-
 
 int print_character(va_list args)
 {
@@ -40,7 +39,7 @@ int print_string(va_list args)
 }
 
 /**
- * print_character - Prints integer
+ * print_integer - Prints integer
  * @args: The va_list containing the integer to print
  *
  * Return: Number of integer printed

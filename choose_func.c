@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * choose_function_specifier_format - Selects function based on format specifier
+ * choose_function_specifier_format - Select function based on format specifier
  * @s: The format specifier character
  *
  * Return: Pointer to the corresponding function or NULL if not found

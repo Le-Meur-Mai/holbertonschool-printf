@@ -7,12 +7,12 @@
  *
  * Return: Number of characters printed (excluding null byte)
  */
- 
+
 int _printf(const char *format, ...)
 {
 	int i = 0;
 	int count = 0;
-	int (*function_pointer_specifier_format)(va_list);
+	int (*func_pointer_specifier_format)(va_list);
 	va_list args;
 
 
@@ -26,14 +26,14 @@ int _printf(const char *format, ...)
 		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			i++;
-			function_pointer_specifier_format = choose_function_specifier_format(format[i]);
-			if (function_pointer_specifier_format != NULL)
+			func_pointer_specifier_format = choose_function_specifier_format(format[i]);
+			if (func_pointer_specifier_format != NULL)
 				count += function_pointer_specifier_format(args);
 			else if (format[i] == '%')
 			{
 				count += _putchar('%');
 			}
-			else if (format[i] > 'A' && format[i] <'z')
+			else if (format[i] > 'A' && format[i] < 'z')
 			{
 				count += _putchar('%');
 				count += _putchar(format[i]);
