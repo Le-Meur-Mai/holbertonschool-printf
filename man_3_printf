@@ -67,9 +67,12 @@ _printf("%s %d %s %d", day, date, month, year);
 .RE
 
 .PP
-Another example:
+Another usage can be:
+.PP
+"The first letter of my name is A and I am 8.":
+.PP
 .RS
-_printf("The first letter of my name is %c and I am %i", FirstLetter, age);
+_printf("The first letter of my name is %c and I am %i.", FirstLetter, age);
 .RE
 .SH SEE ALSO
 .BR printf (3)
