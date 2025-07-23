@@ -1,65 +1,83 @@
-NAME-
-_printf : function that print a string in the standard output
+.TH _PRINTF 3 "July 22, 2025" "Custom C Library" "User Commands"
+.SH NAME
+_printf \- function that prints a string in the standard output
+.SH SYNOPSIS
+.B #include "main.h"
+.PP
+.B int _printf(const char *format, ...);
+.SH DESCRIPTION
+.B _printf
+is a custom implementation of printf (3) from the C standard library function
+.BR printf (3).
+It prints formatted output to the standard output.
 
-SYNOPSIS-
-#include "main.h"
+.PP
+You can use conversion specifiers to format the arguments provided after the
+format string, in the specified order.
 
-int _printf(const char *format, ...);
+.PP
+Supported conversion specifiers:
+.TP
+.B %c
+Prints a character.
+.TP
+.B %s
+Prints a string.
+.TP
+.B %d
+Prints a signed integer (decimal).
+.TP
+.B %i
+Prints a signed integer (decimal).
+.TP
+.B %%
+Prints the '%' character.
 
-DESCRIPTION-
-
-You can use specifiers of conversion,
-you can specify what you want to convert in the arguments in the right order.
-
-Specifiers of Conversion possible:
-
-%c = print the char linked to it in the arguments
-%s = print the char * linked to it in the arguments
-%d = print the int linked to it in the arguments
-%i = print the int linked to it in the arguments
-%% = print the character '%'
-
+.PP
 Flags supported:
+.RS
+None.
+.RE
 
-NONE
+.PP
+Field width:
+.RS
+None.
+.RE
 
-Field width :
+.PP
+Precision:
+.RS
+None.
+.RE
 
-None
-
-Precision :
-
-None
-
-Lenght Modifiers:
-
-None
-
-RETURN VALUE-
-
-The return value correspond to the numbers of bytes print in the
-standard output. The NULL byte is not counted.
-If the string in the argument is NULL, the function return a negative value.
-
-EXAMPLES-
-
-You may want to use _printf to print a date at the format
-"Wednesday 22 july 2025" :
+.PP
+Length modifiers:
+.RS
+None.
+.RE
+.SH RETURN VALUE
+Returns the number of characters printed to the standard output (excluding the
+null byte). If the input string is NULL, the function returns a negative value.
+.SH EXAMPLES
+To print a date like "Wednesday 22 July 2025":
+.PP
+.RS
 _printf("%s %d %s %d", day, date, month, year);
+.RE
 
-Another usage can be :
-"The first letter of my name is A and I am 8"
-_printf("The first letter of my name is %c and I am %i", FirstLetter, age);
-
-SEE ALSO-
-
-printf(3)
-
-DATE-
-
+.PP
+Another usage can be:
+.PP
+"The first letter of my name is A and I am 8.":
+.PP
+.RS
+_printf("The first letter of my name is %c and I am %i.", FirstLetter, age);
+.RE
+.SH SEE ALSO
+.BR printf (3)
+.SH DATE
 22/07/2025
-
-AUTHORS-
-
-Antoine Coquemont
+.SH AUTHORS
+Antoine Coquemont  
 Maï Le Meur
