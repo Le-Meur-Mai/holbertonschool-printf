@@ -1,0 +1,80 @@
+.TH _PRINTF 3 "July 22, 2025" "Custom C Library" "User Commands"
+.SH NAME
+_printf \- function that prints a formatted string to standard output
+.SH SYNOPSIS
+.B #include "main.h"
+.PP
+.B int _printf(const char *format, ...);
+.SH DESCRIPTION
+.B _printf
+is a custom implementation of the C standard library function
+.BR printf (3).
+It prints formatted output to the standard output.
+
+.PP
+You can use conversion specifiers to format the arguments provided after the
+format string, in the specified order.
+
+.PP
+Supported conversion specifiers:
+.TP
+.B %c
+Prints a character.
+.TP
+.B %s
+Prints a string.
+.TP
+.B %d
+Prints a signed integer (decimal).
+.TP
+.B %i
+Prints a signed integer (decimal).
+.TP
+.B %%
+Prints the '%' character.
+
+.PP
+Flags supported:
+.RS
+None.
+.RE
+
+.PP
+Field width:
+.RS
+None.
+.RE
+
+.PP
+Precision:
+.RS
+None.
+.RE
+
+.PP
+Length modifiers:
+.RS
+None.
+.RE
+.SH RETURN VALUE
+Returns the number of characters printed to the standard output (excluding the
+null byte). If the input string is NULL, the function returns a negative value.
+.SH EXAMPLES
+To print a date like "Wednesday 22 July 2025":
+.PP
+.RS
+_printf("%s %d %s %d", day, date, month, year);
+.RE
+
+.PP
+Another example:
+.RS
+_printf("The first letter of my name is %c and I am %i", FirstLetter, age);
+.RE
+.SH SEE ALSO
+.BR printf (3)
+.SH DATE
+22/07/2025
+.SH AUTHORS
+Antoine Coquemont  
+Maï Le Meur
