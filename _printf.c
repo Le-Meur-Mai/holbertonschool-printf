@@ -40,11 +40,16 @@ int _printf(const char *format, ...)
 				count += _putchar('%');
 				count += _putchar(format[i]);
 			}
+			else if (format[i] == '!')
+			{
+				count += _putchar('%');
+				count += _putchar('!');
+			}
 			else
 				count += _putchar('%');
 		}
 		else
-		count += _putchar(format[i]);
+			count += _putchar(format[i]);
 	}
 
 	va_end(args);
