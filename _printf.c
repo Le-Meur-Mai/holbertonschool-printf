@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 			{
 				count += _putchar('%');
 			}
-			else if (format[i] > 'A' && format[i] < 'z')
+			else if (format[i] >= 'A' && format[i] <= 'z')
 			{
 				count += _putchar('%');
 				count += _putchar(format[i]);
