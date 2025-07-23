@@ -47,7 +47,7 @@ int print_string(va_list args)
 
 int print_integer(va_list args)
 {
-	int number = va_arg(args, int);
+	long number = va_arg(args, int);
 	int modulo = 0, i = 0, count = 0, negative = 0;
 	char *string;
 
