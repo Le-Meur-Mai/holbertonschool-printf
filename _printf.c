@@ -10,19 +10,14 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0;
-	int count = 0;
+	int i = 0, count = 0;
 	int (*func_pointer_specifier_format)(va_list);
 	va_list args;
 
 
-	if (format == NULL)
+	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-	if (format[0] == '%' && format[1] == '\0')
-		return (-1);
-
 	va_start(args, format);
-
 	for (; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%' && format[i + 1] != '\0')
@@ -32,9 +27,7 @@ int _printf(const char *format, ...)
 			if (func_pointer_specifier_format != NULL)
 				count += func_pointer_specifier_format(args);
 			else if (format[i] == '%')
-			{
 				count += _putchar('%');
-			}
 			else if (format[i] >= 'A' && format[i] <= 'z')
 			{
 				count += _putchar('%');
