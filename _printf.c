@@ -28,7 +28,8 @@ int _printf(const char *format, ...)
 				count += func_pointer_specifier_format(args);
 			else if (format[i] == '%')
 				count += _putchar('%');
-			else if ((format[i] >= 'A' && format[i] <= 'z') || format[i] == '!')
+			else if ((format[i] >= 'A' && format[i] <= 'z') 
+			|| format[i] == '!')
 			{
 				count += _putchar('%');
 				count += _putchar(format[i]);
