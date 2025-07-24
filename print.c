@@ -96,11 +96,13 @@ int reverse_print_str(va_list args)
 		string = "(null)";
     }
 
-    i = _string_length(string);
-    while (i > 0)
+    i = _string_length(string) - 1;
+    while (i >= 0)
     {
         _putchar(string[i]);
+		i--;
     }
+	i = _string_length(string);
 
     return (i);
 }

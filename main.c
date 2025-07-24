@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -7,8 +8,11 @@
  */
 int main(void)
 {
-	char Salut[] = {'B', 'o', 'n', 'j', 'o', 'u', 'r', '\0'};
+    int len1, len2;
 
-    _printf("%r\n", Salut);
+   len1 = _printf("%d bla\n", 303);
+   len2 = printf("%d bla\n", 303);
+   printf("%d\n", len1);
+   _printf("%d\n", len2);
     return (0);
 }
