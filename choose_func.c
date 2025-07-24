@@ -14,6 +14,7 @@ int (*choose_function_specifier_format(char s))(va_list args)
 		{'s', print_string},
 		{'d', print_integer},
 		{'i', print_integer},
+		{'b', print_binary},
 		{'\0', NULL}
 	};
 	int i = 0;

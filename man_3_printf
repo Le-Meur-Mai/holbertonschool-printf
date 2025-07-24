@@ -79,5 +79,5 @@ _printf("The first letter of my name is %c and I am %i.", FirstLetter, age);
 .SH DATE
 22/07/2025
 .SH AUTHORS
-Antoine Coquemont  
+Antoine Coquemont
 Maï Le Meur

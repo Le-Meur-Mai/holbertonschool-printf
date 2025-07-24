@@ -42,7 +42,7 @@ int print_string(va_list args)
  * print_integer - Prints integer
  * @args: The va_list containing the integer to print
  *
- * Return: Number of integer printed
+ * Return: Number of characters printed
  */
 
 int print_integer(va_list args)
@@ -69,6 +69,57 @@ int print_integer(va_list args)
 	{
 		modulo = number % 10;
 		number = number / 10;
+		string[i] = '0' + modulo;
+		i++;
+	}
+	if (negative == 1)
+	{
+		string[i] = '-';
+		i++;
+	}
+	string[i] = '\0';
+	count = _string_length(string) - 1;
+	while (count >= 0)
+	{
+		_putchar(string[count]);
+		count--;
+	}
+	count = _string_length(string);
+	free(string);
+	return (count);
+}
+
+/**
+ * print_binary - Convert and print an integer to binary
+ * @args: The va_list containing the integer to convert to binary
+ *
+ * Return: Number of characters printed
+ */
+
+int print_binary(va_list args)
+{
+	long number = va_arg(args, int);
+	int modulo = 0, i = 0, count = 0, negative = 0;
+	char *string;
+
+	string = malloc(12);
+	if (string == NULL)
+		return (0);
+	if (number < 0)
+	{
+		negative = 1;
+		number = -number;
+	}
+	else if (number == 0)
+	{
+		_putchar('0');
+		free(string);
+		return (1);
+	}
+	while (number > 0)
+	{
+		modulo = number % 2;
+		number = number / 2;
 		string[i] = '0' + modulo;
 		i++;
 	}

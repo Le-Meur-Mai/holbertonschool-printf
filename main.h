@@ -12,6 +12,7 @@ int _putchar(char c);
 int print_character(va_list args);
 int print_string(va_list args);
 int print_integer(va_list args);
+int print_binary(va_list args);
 
 /**
  * struct specifier_function_structur - Maps format specifiers to functions
