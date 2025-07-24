@@ -29,23 +29,3 @@ int _string_length(char *s)
 	}
 	return (i);
 }
-
-int reverse_print_str(va_list args)
-{
-    int i = 0;
-    char *string;
-
-    string = va_arg(args, char *);
-    if (!string)
-    {
-		string = "(null)";
-    }
-
-    i = _string_length(string);
-    while (i > 0)
-    {
-        _putchar(string[i]);
-    }
-
-    return (i);
-}
