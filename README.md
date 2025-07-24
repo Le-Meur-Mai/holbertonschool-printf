@@ -3,6 +3,10 @@
 
 Custom implementation of the C standard library function `printf`.
 
+# Flowchart
+
+![alt text](https://github.com/Le-Meur-Mai/holbertonschool-printf/blob/main/DiagramPrintfFinal.png?raw=true)
+
 
 ## Project Description
 
