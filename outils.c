@@ -1,11 +1,25 @@
 #include "main.h"
 
+/**
+ * _putchar - Writes a character to standard output
+ * @c: The character to print
+ *
+ * Return: 1 on success, -1 on error
+ */
+
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
 
-int _strlen(char *s)
+/**
+ * _string_length - Calculates the length of a string
+ * @s: Pointer to the string
+ *
+ * Return: Length of the string
+ */
+
+int _string_length(char *s)
 {
 	int i = 0;
 
@@ -14,4 +28,24 @@ int _strlen(char *s)
 		i++;
 	}
 	return (i);
+}
+
+int reverse_print_str(va_list args)
+{
+    int i = 0;
+    char *string;
+
+    string = va_arg(args, char *);
+    if (!string)
+    {
+		string = "(null)";
+    }
+
+    i = _string_length(string);
+    while (i > 0)
+    {
+        _putchar(string[i]);
+    }
+
+    return (i);
 }

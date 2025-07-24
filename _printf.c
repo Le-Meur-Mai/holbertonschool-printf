@@ -1,38 +1,46 @@
 #include "main.h"
 #include <stdarg.h>
+
 /**
+ * _printf - Produces output according to a format string
+ * @format: The format string containing characters and format specifiers
  *
+ * Return: Number of characters printed (excluding null byte)
  */
 
 int _printf(const char *format, ...)
 {
-	int i = 1;
-	int result = 0;
-	int (*speformat)(va_list);
-	va_list = args;
+	int i = 0, count = 0;
+	int (*func_pointer_specifier_format)(va_list);
+	va_list args;
 
-	if (format[0] == '"' && format != NULL)
+
+	if (!format || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+	va_start(args, format);
+	for (; format[i] != '\0'; i++)
 	{
-		for (; format[i] != '\0'; i++)
+		if (format[i] == '%' && format[i + 1] != '\0')
 		{
-			if (format[i] == '%')
+			i++;
+			func_pointer_specifier_format = choose_function_specifier_format(format[i]);
+			if (func_pointer_specifier_format != NULL)
+				count += func_pointer_specifier_format(args);
+			else if (format[i] == '%')
+				count += _putchar('%');
+			else if ((format[i] >= 'A' && format[i] <= 'z')
+			|| format[i] == '!')
 			{
-				speformat = get_sf_func(format[i + 1]);
-				if (format[i + 1] == 's')
-				{
-					speformat(va_arg(args, char *));
-				}
-				else
-				{
-					speformat(va_arg(args, int));
-				}
-				i++;
+				count += _putchar('%');
+				count += _putchar(format[i]);
 			}
-			if (format[i] == '"')
-			break;
-
-			result++;
+			else
+				count += _putchar('%');
 		}
+		else
+			count += _putchar(format[i]);
 	}
-	return (0);
+
+	va_end(args);
+	return (count);
 }
