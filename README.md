@@ -1,6 +1,7 @@
 
 # _printf
 
+Function that prints a formatted string to standard output.
 Custom implementation of the C standard library function `printf`.
 
 # Flowchart
@@ -12,7 +13,7 @@ Custom implementation of the C standard library function `printf`.
 
 This project is a simplified recreation of the `printf` function from the C standard library.
 
-| Specificater  | Description                         |
+| Specifier  | Description                         |
 |---------------|-------------------------------------|
 | `%c`          | Print a character                   |
 | `%s`          | Print a string of character         |
