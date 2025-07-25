@@ -6,7 +6,9 @@ Custom implementation of the C standard library function `printf`.
 
 # Flowchart
 
-<img width="1814" height="1348" alt="DiagramPrintfFinal" src="https://github.com/user-attachments/assets/945edf95-5e51-47de-aea6-595066de0ab9" />
+
+<img width="1814" height="1348" alt="FlowchartFinal" src="https://github.com/user-attachments/assets/872ab045-b3b2-43bd-88db-c6c977e75e9b" />
+
 
 
 ## Project Description
