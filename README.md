@@ -13,13 +13,14 @@ Custom implementation of the C standard library function `printf`.
 
 This project is a simplified recreation of the `printf` function from the C standard library.
 
-| Specifier  | Description                         |
-|---------------|-------------------------------------|
-| `%c`          | Print a character                   |
-| `%s`          | Print a string of character         |
-| `%d`          | Print a signed decimal              |
-| `%i`          | Print an integer (same as `%d`)     |
-| `%%`          | Print the character  `%`            |
+| Specifier  | Description                          |
+|---------------|------------------------------------- |
+| `%c`          | Print a character                    |
+| `%s`          | Print a string of character          |
+| `%d`          | Print a signed decimal               |
+| `%i`          | Print an integer (same as `%d`)      |
+| `%r`          | Print a string of character backward |
+| `%%`          | Print the character  `%`             |
 
 ---
 ## Compilation command

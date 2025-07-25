@@ -30,6 +30,9 @@ Prints a signed integer (decimal).
 .B %i
 Prints a signed integer (decimal).
 .TP
+.B %r
+Prints a string backward.
+.TP
 .B %%
 Prints the '%' character.
 

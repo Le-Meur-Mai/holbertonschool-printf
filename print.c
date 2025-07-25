@@ -85,3 +85,32 @@ int print_integer(va_list args)
 	free(string);
 	return (count);
 }
+
+/**
+ * reverse_print_string- print a string backward
+ * @args: The va_list containing the string to print backward
+ *
+ * Return: Number of characters printed
+ */
+
+int reverse_print_string(va_list args)
+{
+    int i = 0;
+    char *string;
+
+    string = va_arg(args, char *);
+    if (!string)
+    {
+		string = "(null)";
+    }
+
+    i = _string_length(string) - 1;
+    while (i >= 0)
+    {
+        _putchar(string[i]);
+		i--;
+    }
+	i = _string_length(string);
+
+    return (i);
+}
